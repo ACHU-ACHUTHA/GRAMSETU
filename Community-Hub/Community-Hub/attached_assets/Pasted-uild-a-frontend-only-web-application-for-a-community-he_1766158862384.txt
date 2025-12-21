@@ -1,0 +1,110 @@
+uild a frontend-only web application for a community health worker (ASHA worker) to manage patient health data in low-resource, offline-first environments.
+
+Tech & scope:
+- Frontend-focused (no backend logic required)
+- Use clean, modern UI
+- Responsive design (mobile + tablet + desktop)
+- Offline-first UI concept (local storage simulation)
+- Use clear components and separate screens/pages
+
+Core Screens & Features:
+
+1. Authentication Screens
+- Screen 1: Registration screen (offline)
+  - Fields: Name, Village, PIN
+  - Text note: “Data stored locally (offline mode)”
+- Screen 2: Login screen
+  - PIN-only login
+  - Simple and minimal UI
+
+2. Main Dashboard
+- Top header:
+  - ASHA worker name
+  - Village name
+- Emergency shortcut button (always visible)
+  - Red button
+  - Label: “Emergency”
+  - UI hint: sends SMS / calls emergency code (frontend only)
+- Central dashboard cards:
+  - “Add Patient” (big primary button)
+  - “View Patients”
+  - “High Risk Alerts” (highlighted)
+- Summary widgets:
+  - Total patients
+  - High-risk patients count
+
+3. Patient List Screen
+- Search and filter options:
+  - Search by name
+  - Filter by village
+  - Filter by risk level (Low / Medium / High)
+  - Recent visits filter
+- Patient cards:
+  - Name, age, village
+  - Risk badge (Low / Medium / High with color coding)
+  - Last visit date
+- Clicking a patient opens Patient Details screen
+
+4. Add / Update Patient Screen
+- Form fields:
+  - Name
+  - Age
+  - Village
+  - Symptoms (checkboxes + text input)
+    - Fever
+    - Cough
+    - Other (text box)
+  - Fever days count
+- Risk indicator (UI-based):
+  - Automatically shows risk badge based on symptom count
+  - Low / Medium / High
+- Save button (store in local state / local storage)
+
+5. Patient Detail Screen
+- Patient profile header:
+  - Name, age, village
+  - Risk badge prominently displayed
+- Sections:
+  - Current symptoms
+  - Visit history (timeline style)
+  - Notes from health worker
+- Advice section:
+  - If risk is Low → show healthy advice
+    - Example: “An apple a day keeps doctor away”
+  - If risk is High → show warning message and referral advice
+
+6. High-Risk Alerts Screen
+- Separate screen listing only High-Risk patients
+- Each card shows:
+  - Patient name
+  - Symptoms
+  - Quick action buttons:
+    - “View Details”
+    - “Emergency”
+
+7. Multi-language UI (UI only)
+- Language switcher in header
+- Example languages:
+  - English
+  - Local language placeholder
+- Text changes simulated (no real translation needed)
+
+Design Guidelines:
+- Simple healthcare color palette (white, blue, green, red for alerts)
+- Clear typography
+- Large buttons for ease of use
+- Card-based layout
+- Icons for symptoms, alerts, and actions
+
+Code Rules:
+- Clean, readable, well-commented code
+- Logical folder/file structure
+- Separate UI components where possible
+- No backend or API calls
+- Focus on frontend structure and UX
+
+Deliverables:
+- Fully working frontend UI
+- Multiple screens with navigation
+- Dashboard-style layout
+- Editable code suitable for VS Code development
