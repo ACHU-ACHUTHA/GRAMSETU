@@ -1,5 +1,4 @@
-# GRAMSETU
-# GramSetu 🌾🏥  
+# GRAMSETU 🌾🏥  
 **Offline-First Community Health Web App**
 
 ## Overview
