@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #fdf8f0;
+    --text: #2a1f10;
+    --muted: #7a6450;
+    --border: #e0c99a;
+    --card: #fff9f0;
+    --accent: #c97f2a;
+    --green: #3d8c3d;
+    --red: #c0392b;
+    --saffron: #ff9933;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Hind', sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Yatra One', serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-earth-200 rounded-xl shadow-sm p-5;
+  }
+
+  .btn-primary {
+    @apply bg-leaf-600 hover:bg-leaf-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-earth-100 hover:bg-earth-200 text-earth-800 font-semibold px-5 py-2.5 rounded-lg transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .input {
+    @apply w-full border border-earth-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-leaf-400 focus:border-transparent transition-all;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-earth-700 mb-1;
+  }
+
+  .section-title {
+    @apply font-display text-2xl md:text-3xl text-earth-900 mb-1;
+  }
+
+  .hero-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c97f2a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.3s ease forwards; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5ece0; }
+::-webkit-scrollbar-thumb { background: #c49a6c; border-radius: 3px; }
